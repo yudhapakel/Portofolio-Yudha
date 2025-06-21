@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+body.dark {
+  background: #121212;
+  color: #eee;
+}
+
+body.dark section {
+  background: #1e1e1e;
+}
+
+body.dark header {
+  background: #222;
+}
+
+body {
+  background: linear-gradient(to right, #e0f7fa, #e1bee7);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+body {
+  background: linear-gradient(-45deg, #f3ec78, #af4261, #3f51b5, #00bcd4);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+  color: #222;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+header {
+    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+header .btn {
+    display: inline-block;
+    margin-top: 10px;
+    background: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+header {
+  background: linear-gradient(135deg, #1e90ff, #6a5acd);
+}
+
+header {
+  background-image: url('https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: white;
+  text-shadow: 1px 1px 2px #000;
+}
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  z-index: 1000;
+}
+
+.navbar a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.btn {
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px #007bff;
+}
+.btn:hover {
+  box-shadow: 0 0 20px #007bff, 0 0 40px #007bff;
+}
+
+#loader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #eee;
+  border-top: 6px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+
+body {
+  scroll-behavior: smooth;
+  padding-top: 60px;
+}
+
+.project {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+
+section {
+    margin: 40px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+}
+
+#about img {
+    max-width: 150px;
+    padding: 20px;
+    background: white;
+    margin-bottom: 20px;
+}
+
+#about {
+  background: linear-gradient(135deg, #f3f4f6, #e0e7ff);
+}
+
+#about {
+  background: url('https://www.transparenttextures.com/patterns/geometry2.png');
+  background-color: #f3f4f6;
+  background-blend-mode: overlay;
+}
+
+#about {
+  background: linear-gradient(to right, #dfe9f3, #ffffff);
+  padding: 60px 20px;
+}
+.card {
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+
+#project {
+  background: linear-gradient(135deg, #fff7ed, #ffe7e7);
+}
+
+#contact {
+  background: linear-gradient(135deg, #f0fff4, #d1fae5);
+}
+
+#about {
+  background: linear-gradient(120deg, #fef9f7, #f3e5f5);
+  padding: 60px 20px;
+}
+
+#projects {
+  background: linear-gradient(135deg, #f0f4ff, #e3f2fd);
+}
+
+#contact {
+  background: linear-gradient(135deg, #fff, #e0f7fa);
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    background: #eee;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #666;
+}
