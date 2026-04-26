@@ -1,66 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Yudha</title>
-    <link rel="stylesheet" href="style.css"/>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portofolio Yudha Harwanto, mahasiswa Rekayasa Perangkat Lunak Telkom University." />
+  <title>Yudha Harwanto | Software Engineering Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
-<div id="loader">
-  <div class="spinner"></div>
-</div>
-
 <body>
-    <nav class="navbar">
-        <a href="#about">Tentang</a>
-        <a href="#project">Project</a>
-        <a href="#contact">Kontak</a>
-    </nav>
+  <div id="loader" aria-label="Memuat halaman">
+    <div class="spinner"></div>
+  </div>
 
-    <header>
-        <h1>Yudha Harwanto</h1>
-        <p>Junior Developer</p>
-        <a href="#project" class="btn">Lihat Portofolio</a>
-        <button id="toggle-dark">🌙 Mode Gelap</button>
-    </header>
+  <nav class="navbar" aria-label="Navigasi utama">
+    <a class="brand" href="#home">Yudha<span>.</span></a>
+    <button class="menu-toggle" type="button" aria-label="Buka navigasi">☰</button>
+    <div class="nav-links">
+      <a href="#about">Tentang</a>
+      <a href="#skills">Skill</a>
+      <a href="#project">Project</a>
+      <a href="#contact">Kontak</a>
+      <button id="toggle-dark" type="button">🌙</button>
+    </div>
+  </nav>
 
-    <section id="project">
-        <h2>Projek saya</h2>
-        <div class="project-container">
+  <header id="home" class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">Software Engineering Student</p>
+      <h1>Yudha Harwanto</h1>
+      <p class="typing-text" aria-live="polite"></p>
+      <p class="hero-desc">
+        Mahasiswa S1 Rekayasa Perangkat Lunak di Telkom University yang sedang fokus
+        membangun project web, DevOps, dan aplikasi berbasis software engineering.
+      </p>
+      <div class="hero-actions">
+        <a href="#project" class="btn primary">Lihat Project</a>
+        <a href="https://github.com/yudhapakel" target="_blank" rel="noopener" class="btn secondary">GitHub</a>
+      </div>
+    </div>
+    <div class="hero-card" aria-label="Ringkasan profil">
+      <img src="asset/WhatsApp Image 2025-06-18 at 18.02.45_32a72371.jpg" alt="Foto Yudha Harwanto" />
+      <div>
+        <h2>Junior Developer</h2>
+        <p>C# • Java • Python • Web • DevOps</p>
+      </div>
+    </div>
+  </header>
 
+  <main>
+    <section id="about" class="section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Tentang Saya</p>
+        <h2>Membangun solusi digital dengan fondasi engineering yang rapi.</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-card">
+          <p>
+            Halo! Saya Yudha, mahasiswa Rekayasa Perangkat Lunak Telkom University.
+            Saya tertarik pada pengembangan web, aplikasi, DevOps, dan praktik software
+            engineering yang membuat project lebih mudah dikembangkan serta dirawat.
+          </p>
+          <p>
+            Saat ini saya sedang fokus pada Tubes Proyek Tingkat III dan project DevOps,
+            sambil terus memperdalam C#, Java, Python, Docker, dan workflow GitHub.
+          </p>
         </div>
-        <div class="wave"></div>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <strong>RPL</strong>
+            <span>Telkom University</span>
+          </div>
+          <div class="stat-card">
+            <strong>2+</strong>
+            <span>Project fokus aktif</span>
+          </div>
+          <div class="stat-card">
+            <strong>DevOps</strong>
+            <span>Docker & GitHub workflow</span>
+          </div>
+          <div class="stat-card">
+            <strong>Web</strong>
+            <span>Frontend & Backend basics</span>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="about">
-    <h2>Tentang Saya</h2>
-    <img src="asset/WhatsApp Image 2025-06-18 at 18.02.45_32a72371.jpg" alt="Foto Yudha" />
-    <p>Halo! Saya Yudha, mahasiswa Rekayasa Perangkat Lunak Telkom University. Saat ini sedang mendalami C#, Java, dan Python.</p>
-    <div class="wave"></div>
-  </section>
+    <section id="skills" class="section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Tech Stack</p>
+        <h2>Tools dan teknologi yang sedang saya gunakan.</h2>
+      </div>
+      <div class="skills-container">
+        <span>C#</span>
+        <span>Java</span>
+        <span>Python</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Docker</span>
+        <span>Git & GitHub</span>
+        <span>VS Code</span>
+        <span>Android Studio</span>
+        <span>Visual Studio 2022</span>
+      </div>
+    </section>
 
-    <section id="contact">
-        <h2>Kontak</h2>
-        <p>Email: <a href="mailto:yudahp23@gmail.com">yudahp23@gmail.com</a></p>
-        <p>Github <a href="https://github.com/yudhapakel" tabindex="_blank">yudhapakel</a></p>
-        <div class="wave"></div>
-    </section> 
+    <section id="project" class="section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Project</p>
+        <h2>Beberapa project yang pernah dan sedang saya kerjakan.</h2>
+      </div>
+      <div class="project-container"></div>
+    </section>
 
-    <section id="about" data-aos="fade-up">
+    <section id="contact" class="section contact-section reveal">
+      <div>
+        <p class="eyebrow">Kontak</p>
+        <h2>Mari terhubung dan bangun sesuatu yang berguna.</h2>
+        <p>Terbuka untuk diskusi project, kolaborasi tugas, atau pengembangan portofolio.</p>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:yudahp23@gmail.com">yudahp23@gmail.com</a>
+        <a href="https://github.com/yudhapakel" target="_blank" rel="noopener">github.com/yudhapakel</a>
+      </div>
+    </section>
+  </main>
 
-    <footer>
-        <p>&copy; <span id="year"></span> Yudha Harwanto</p>
-    </footer>
+  <footer>
+    <p>&copy; <span id="year"></span> Yudha Harwanto. Built with HTML, CSS, and JavaScript.</p>
+  </footer>
 
-    <script src="script.js"></script>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-
-    
+  <script src="script.js"></script>
 </body>
 </html>
