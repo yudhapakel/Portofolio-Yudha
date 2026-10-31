@@ -3,49 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portofolio Yudha Harwanto, mahasiswa Rekayasa Perangkat Lunak Telkom University." />
-  <title>Yudha Harwanto | Software Engineering Portfolio</title>
+  <meta name="description" content="Portofolio Yudha Harwanto Putra - Software Engineer & Backend Developer spesialis Node.js, TypeScript, Linux, dan Sistem Terdistribusi." />
+  <title>Yudha Harwanto | Software & Backend Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="dark">
+  <!-- Interactive Mesh / Ambient Glow -->
+  <div class="ambient-glow glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+
   <div id="loader" aria-label="Memuat halaman">
     <div class="spinner"></div>
   </div>
 
   <nav class="navbar" aria-label="Navigasi utama">
-    <a class="brand" href="#home">Yudha<span>.</span></a>
-    <button class="menu-toggle" type="button" aria-label="Buka navigasi">☰</button>
+    <a class="brand" href="#home">
+      <span class="brand-code">&lt;</span>Yudha<span class="dot">.dev</span><span class="brand-code">/&gt;</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Buka navigasi">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
     <div class="nav-links">
       <a href="#about">Tentang</a>
-      <a href="#skills">Skill</a>
-      <a href="#project">Project</a>
+      <a href="#skills">Keahlian</a>
+      <a href="#project">Proyek Unggulan</a>
       <a href="#contact">Kontak</a>
-      <button id="toggle-dark" type="button">🌙</button>
+      <button id="toggle-dark" type="button" aria-label="Ganti mode gelap/terang">
+        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      </button>
     </div>
   </nav>
 
   <header id="home" class="hero">
     <div class="hero-content">
-      <p class="eyebrow">Software Engineering Student</p>
-      <h1>Yudha Harwanto</h1>
+      <div class="status-badge">
+        <span class="status-pulse"></span>
+        <span>Semester 7 • Terbuka untuk Kolaborasi & Kerja</span>
+      </div>
+      <h1 class="hero-title">
+        Membangun <span class="gradient-text">Arsitektur Backend</span> & Sistem Terdistribusi yang Tangguh.
+      </h1>
       <p class="typing-text" aria-live="polite"></p>
       <p class="hero-desc">
-        Mahasiswa S1 Rekayasa Perangkat Lunak di Telkom University yang sedang fokus
-        membangun project web, DevOps, dan aplikasi berbasis software engineering.
+        Mahasiswa S1 Rekayasa Perangkat Lunak di Telkom University. Berfokus pada pengembangan backend web seperti perancangan REST API yang scalable, manajemen basis data relasional, pengujian sistem, dan deployment server Linux.
       </p>
       <div class="hero-actions">
-        <a href="#project" class="btn primary">Lihat Project</a>
-        <a href="https://github.com/yudhapakel" target="_blank" rel="noopener" class="btn secondary">GitHub</a>
+        <a href="#project" class="btn primary glow-btn">
+          Jelajahi Proyek 
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+        <a href="https://github.com/yudhapakel" target="_blank" rel="noopener" class="btn secondary">
+          <svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub Profile
+        </a>
       </div>
     </div>
-    <div class="hero-card" aria-label="Ringkasan profil">
-      <img src="asset/WhatsApp Image 2025-06-18 at 18.02.45_32a72371.jpg" alt="Foto Yudha Harwanto" />
-      <div>
-        <h2>Junior Developer</h2>
-        <p>C# • Java • Python • Web • DevOps</p>
+    <div class="hero-card-wrapper">
+      <div class="glass-card hero-card" aria-label="Ringkasan profil">
+        <div class="card-glow"></div>
+        <div class="avatar-box">
+          <img src="asset/profile.jpg" alt="Foto Yudha Harwanto" onerror="this.src='https://avatars.githubusercontent.com/u/108398410?v=4'" />
+          <div class="online-indicator" title="Homeserver & Dev Online"></div>
+        </div>
+        <div class="card-details">
+          <h2>Yudha Harwanto Putra</h2>
+          <p class="role-subtitle">Backend & Systems Engineer</p>
+          <div class="pill-list">
+            <span>Laravel / PHP</span>
+            <span>Node.js / TS</span>
+            <span>Linux & Docker</span>
+          </div>
+          <div class="terminal-mini">
+            <span class="term-prompt">$</span> <span class="term-cmd">curl -s yudha.info/status</span>
+            <div class="term-out">200 OK • All Systems Operational</div>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -54,84 +90,174 @@
     <section id="about" class="section reveal">
       <div class="section-heading">
         <p class="eyebrow">Tentang Saya</p>
-        <h2>Membangun solusi digital dengan fondasi engineering yang rapi.</h2>
+        <h2>Menghubungkan rekayasa software dengan stabilitas infrastruktur.</h2>
       </div>
       <div class="about-grid">
-        <div class="about-card">
+        <div class="glass-card about-card">
           <p>
-            Halo! Saya Yudha, mahasiswa Rekayasa Perangkat Lunak Telkom University.
-            Saya tertarik pada pengembangan web, aplikasi, DevOps, dan praktik software
-            engineering yang membuat project lebih mudah dikembangkan serta dirawat.
+            Halo! Saya <strong>Yudha Harwanto Putra</strong>, mahasiswa Rekayasa Perangkat Lunak di <strong>Telkom University</strong>. Saya mendedikasikan fokus pada pengembangan backend, arsitektur data relasional, pengujian otomatis, serta pengelolaan sistem berbasis Linux.
           </p>
           <p>
-            Saat ini saya sedang fokus pada Tubes Proyek Tingkat III dan project DevOps,
-            sambil terus memperdalam C#, Java, Python, Docker, dan workflow GitHub.
+            Berpengalaman mengembangkan produk web mulai dari backend official <strong>HMRPL Telkom University</strong> yang beroperasi aktif secara live, arsitektur transit routing engine di <strong>Relay (OTEWE)</strong>, digitalisasi aset daerah di <strong>BKAD Seruyan</strong>, hingga manajemen server Linux mandiri.
           </p>
+          <div class="highlights-row">
+            <div class="hl-item">
+              <span class="hl-icon-svg">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </span>
+              <div>
+                <strong>Clean & Layered Code</strong>
+                <p>Separation of concerns, Zod type-safe validation, dan modular services.</p>
+              </div>
+            </div>
+            <div class="hl-item">
+              <span class="hl-icon-svg">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+              </span>
+              <div>
+                <strong>Linux & Sysadmin Savvy</strong>
+                <p>Systemd automation, headless troubleshooting, dan secure network bridging.</p>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="stats-grid">
-          <div class="stat-card">
-            <strong>RPL</strong>
-            <span>Telkom University</span>
+          <div class="glass-card stat-card">
+            <div class="stat-num">S1</div>
+            <span class="stat-label">Rekayasa Perangkat Lunak</span>
+            <span class="stat-sub">Telkom University</span>
           </div>
-          <div class="stat-card">
-            <strong>2+</strong>
-            <span>Project fokus aktif</span>
+          <div class="glass-card stat-card">
+            <div class="stat-num">Production</div>
+            <span class="stat-label">Live Web Services</span>
+            <span class="stat-sub">HMRPL & Server Deployment</span>
           </div>
-          <div class="stat-card">
-            <strong>DevOps</strong>
-            <span>Docker & GitHub workflow</span>
+          <div class="glass-card stat-card">
+            <div class="stat-num">24/7</div>
+            <span class="stat-label">Homeserver Uptime</span>
+            <span class="stat-sub">Tailscale Mesh & User Services</span>
           </div>
-          <div class="stat-card">
-            <strong>Web</strong>
-            <span>Frontend & Backend basics</span>
+          <div class="glass-card stat-card">
+            <div class="stat-num">Government</div>
+            <span class="stat-label">BKAD Seruyan Project</span>
+            <span class="stat-sub">Sistem Aset & Pemeliharaan</span>
           </div>
         </div>
       </div>
     </section>
 
     <section id="skills" class="section reveal">
-      <div class="section-heading">
-        <p class="eyebrow">Tech Stack</p>
-        <h2>Tools dan teknologi yang sedang saya gunakan.</h2>
+      <div class="section-heading text-center">
+        <p class="eyebrow">Tech Stack & Tools</p>
+        <h2>Teknologi yang saya gunakan untuk memproduksi solusi nyata.</h2>
       </div>
-      <div class="skills-container">
-        <span>C#</span>
-        <span>Java</span>
-        <span>Python</span>
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Docker</span>
-        <span>Git & GitHub</span>
-        <span>VS Code</span>
-        <span>Android Studio</span>
-        <span>Visual Studio 2022</span>
+      
+      <div class="skills-category-grid">
+        <div class="glass-card skill-group">
+          <div class="group-title">
+            <span class="group-icon-svg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </span>
+            Backend & Languages
+          </div>
+          <div class="skills-container">
+            <span class="skill-pill">PHP</span>
+            <span class="skill-pill">Laravel</span>
+            <span class="skill-pill">TypeScript</span>
+            <span class="skill-pill">JavaScript (Node.js)</span>
+            <span class="skill-pill">Express.js</span>
+            <span class="skill-pill">NestJS</span>
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">Java</span>
+          </div>
+        </div>
+
+        <div class="glass-card skill-group">
+          <div class="group-title">
+            <span class="group-icon-svg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+            </span>
+            Database & ORM
+          </div>
+          <div class="skills-container">
+            <span class="skill-pill">PostgreSQL</span>
+            <span class="skill-pill">MySQL</span>
+            <span class="skill-pill">Prisma ORM</span>
+            <span class="skill-pill">Relational Schema Design</span>
+            <span class="skill-pill">Database Normalization</span>
+          </div>
+        </div>
+
+        <div class="glass-card skill-group">
+          <div class="group-title">
+            <span class="group-icon-svg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+            </span>
+            DevOps & Infrastructure
+          </div>
+          <div class="skills-container">
+            <span class="skill-pill">Linux (Arch / Ubuntu)</span>
+            <span class="skill-pill">Docker & Compose</span>
+            <span class="skill-pill">Git & GitHub Actions (CI/CD)</span>
+            <span class="skill-pill">Tailscale WireGuard Mesh</span>
+            <span class="skill-pill">Systemd User Services</span>
+            <span class="skill-pill">Bash Scripting</span>
+          </div>
+        </div>
+
+        <div class="glass-card skill-group">
+          <div class="group-title">
+            <span class="group-icon-svg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </span>
+            Architecture & Quality
+          </div>
+          <div class="skills-container">
+            <span class="skill-pill">RESTful API Design</span>
+            <span class="skill-pill">MVC & Clean Architecture</span>
+            <span class="skill-pill">Eloquent & Prisma ORM</span>
+            <span class="skill-pill">JWT & Auth Flow</span>
+            <span class="skill-pill">Zod & Request Validation</span>
+            <span class="skill-pill">Automated Unit Testing</span>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="project" class="section reveal">
       <div class="section-heading">
-        <p class="eyebrow">Project</p>
-        <h2>Beberapa project yang pernah dan sedang saya kerjakan.</h2>
+        <p class="eyebrow">Portofolio Proyek</p>
+        <h2>Karya yang mencerminkan ketelitian dan eksekusi teknis.</h2>
       </div>
       <div class="project-container"></div>
     </section>
 
     <section id="contact" class="section contact-section reveal">
-      <div>
-        <p class="eyebrow">Kontak</p>
-        <h2>Mari terhubung dan bangun sesuatu yang berguna.</h2>
-        <p>Terbuka untuk diskusi project, kolaborasi tugas, atau pengembangan portofolio.</p>
-      </div>
-      <div class="contact-links">
-        <a href="mailto:yudahp23@gmail.com">yudahp23@gmail.com</a>
-        <a href="https://github.com/yudhapakel" target="_blank" rel="noopener">github.com/yudhapakel</a>
+      <div class="glass-card contact-card">
+        <div>
+          <p class="eyebrow">Hubungi Saya</p>
+          <h2>Siap berkolaborasi untuk proyek berkualitas.</h2>
+          <p>Terbuka untuk peluang kerja backend, internship lanjutan, atau diskusi teknis seputar arsitektur software.</p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:yudahp23@gmail.com" class="btn primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            yudahp23@gmail.com
+          </a>
+          <a href="https://github.com/yudhapakel" target="_blank" rel="noopener" class="btn secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            github.com/yudhapakel
+          </a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> Yudha Harwanto. Built with HTML, CSS, and JavaScript.</p>
+    <div class="footer-content">
+      <p>&copy; <span id="year"></span> <strong>Yudha Harwanto Putra</strong>. Crafted with clean architecture & modern web standards.</p>
+      <div class="footer-tag">Homeserver Powered • Telkom University</div>
+    </div>
   </footer>
 
   <script src="script.js"></script>
