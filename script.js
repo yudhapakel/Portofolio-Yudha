@@ -246,18 +246,39 @@ function initThreeJS() {
   const particleMesh = new THREE.Points(particleGeo, particleMaterial);
   group.add(particleMesh);
 
-  // Mouse interaction: rotasi murni merespons posisi mouse & BERHENTI saat kursor diam
+  // Mouse & Touch interaction: rotasi merespons kursor mouse, sentuhan jari (touch), dan orientasi HP (giroskop)
   let targetRotationX = 0;
   let targetRotationY = 0;
 
+  // 1. Mouse move (Desktop)
   window.addEventListener('mousemove', (e) => {
-    // Normalisasi posisi kursor dari tengah layar (-1 sampai 1)
     const normX = (e.clientX / window.innerWidth - 0.5) * 2;
     const normY = (e.clientY / window.innerHeight - 0.5) * 2;
-
-    // Target sudut kemiringan (radians)
     targetRotationY = normX * 0.9;
     targetRotationX = normY * 0.6;
+  });
+
+  // 2. Touch move (Layar sentuh HP / Tablet)
+  window.addEventListener('touchmove', (e) => {
+    if (e.touches && e.touches.length > 0) {
+      const touch = e.touches[0];
+      const normX = (touch.clientX / window.innerWidth - 0.5) * 2;
+      const normY = (touch.clientY / window.innerHeight - 0.5) * 2;
+      targetRotationY = normX * 0.9;
+      targetRotationX = normY * 0.6;
+    }
+  }, { passive: true });
+
+  // 3. Device Orientation / Gyroscope (Miringin bodi HP)
+  window.addEventListener('deviceorientation', (e) => {
+    if (e.gamma !== null && e.beta !== null) {
+      // gamma: tilt kiri-kanan [-90, 90]
+      // beta: tilt depan-belakang [-180, 180]
+      const clampGamma = Math.max(-45, Math.min(45, e.gamma));
+      const clampBeta = Math.max(-45, Math.min(45, e.beta - 45)); // kompensasi posisi normal pegang HP (~45 deg)
+      targetRotationY = (clampGamma / 45) * 0.9;
+      targetRotationX = (clampBeta / 45) * 0.6;
+    }
   });
 
   // Responsive resize
