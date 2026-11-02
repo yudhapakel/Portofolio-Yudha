@@ -246,15 +246,18 @@ function initThreeJS() {
   const particleMesh = new THREE.Points(particleGeo, particleMaterial);
   group.add(particleMesh);
 
-  // Mouse interaction
-  let mouseX = 0;
-  let mouseY = 0;
-  let targetX = 0;
-  let targetY = 0;
+  // Mouse interaction: rotasi murni merespons posisi mouse & BERHENTI saat kursor diam
+  let targetRotationX = 0;
+  let targetRotationY = 0;
 
   window.addEventListener('mousemove', (e) => {
-    mouseX = (e.clientX - window.innerWidth / 2) * 0.001;
-    mouseY = (e.clientY - window.innerHeight / 2) * 0.001;
+    // Normalisasi posisi kursor dari tengah layar (-1 sampai 1)
+    const normX = (e.clientX / window.innerWidth - 0.5) * 2;
+    const normY = (e.clientY / window.innerHeight - 0.5) * 2;
+
+    // Target sudut kemiringan (radians)
+    targetRotationY = normX * 0.9;
+    targetRotationX = normY * 0.6;
   });
 
   // Responsive resize
@@ -272,19 +275,13 @@ function initThreeJS() {
   });
   observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
 
-  // Animation loop
+  // Animation loop: Lerp halus ke target sudut. Begitu kursor diam, objek otomatis DIAM TOTAL!
   function animate() {
     requestAnimationFrame(animate);
 
-    // Smooth slow-motion floating
-    targetX += (mouseX - targetX) * 0.012;
-    targetY += (mouseY - targetY) * 0.012;
-
-    group.rotation.y += 0.00035;
-    group.rotation.x += 0.00018;
-
-    group.rotation.y += targetX * 0.06;
-    group.rotation.x += targetY * 0.06;
+    // Damping / inertia halus
+    group.rotation.y += (targetRotationY - group.rotation.y) * 0.04;
+    group.rotation.x += (targetRotationX - group.rotation.x) * 0.04;
 
     renderer.render(scene, camera);
   }
